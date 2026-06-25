@@ -1,0 +1,77 @@
+{
+    "1": {
+        "nombre" : "Venusaur",
+        "tipo" :  "Planta/Veneno",
+        "pc" : "3075"
+    },
+    "2" : {
+        "nombre" : "Charizard",
+        "tipo" :  "Fuego/Volador",
+        "pc" : "3266"
+    },
+    "3" : {
+        "nombre" : "Blastoise",
+        "tipo" :  "Agua",
+        "pc" : "2788"
+    },
+    "4" : {
+        "nombre" : "Absol",
+        "tipo" :  "Siniestro",
+        "pc" : "2856"
+    },
+    "5" : {
+        "nombre" : "Umbreon",
+        "tipo" :  "Siniestro",
+        "pc" : "2416"
+    },
+    "6" : {
+        "nombre" : "Gardevoir",
+        "tipo" :  "Psiquico/Hada",
+        "pc" : "3658"
+    },
+    "7" : {
+        "nombre" : "Alakazam",
+        "tipo" :  "Psiquico",
+        "pc" : "3057"
+    },
+    "8" : {
+        "nombre" : "Garchomp",
+        "tipo" :  "Dragon/Tierra",
+        "pc" : "4479"
+    },
+    "9" : {
+        "nombre" : "Arcanine",
+        "tipo" :  "Fuego",
+        "pc" : "3425"
+    },
+    "10" : {
+        "nombre" : "Salamence",
+        "tipo" :  "Volador/Dragon",
+        "pc" : "4239"
+    },
+    "11" : {
+        "nombre" : "Butterfree",
+        "tipo" :  "Bicho/Volador",
+        "pc" : "1836"
+    },
+    "12" : {
+        "nombre" : "Raichu",
+        "tipo" :  "Electrico/Psiquico",
+        "pc" : "2286"
+    },
+    "13" : {
+        "nombre" : "Cloadsire",
+        "tipo" :  "Tierra/Veneno",
+        "pc" : "2610"
+    },
+    "14" : {
+        "nombre" : "Galvantula",
+        "tipo" :  "Bicho/Electrico",
+        "pc" : "2494"
+    },
+    "15" : {
+        "nombre" : "Banette",
+        "tipo" :  "Fantasma",
+        "pc" : "2628"
+    }
+}
