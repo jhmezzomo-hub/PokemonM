@@ -5,6 +5,7 @@ class Entrenador():
         self.nombre = nombre
         self.equipo = []
         self.pc = Pc()
+        self.medallero = []
     
     def agregar_pokemon_equipo(self, pokemon):
         if len(self.equipo) <= 6:
