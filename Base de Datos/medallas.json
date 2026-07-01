@@ -1,4 +1,10 @@
 {
-    "roca" : "False",
-    "cascada" : "False"
+    "Brock" : "Medalla Roca",
+    "Misty" : "Medalla Cascada",
+    "Teniente Surge" : "Medalla Trueno",
+    "Erika" : "Medalla Arcoiris",
+    "Koga" : "Medalla Alma",
+    "Sabrina" : "Medalla Pantano",
+    "Blaine" : "Medalla Volcan",
+    "Giovanni" : "Medalla Tierra"
 }
