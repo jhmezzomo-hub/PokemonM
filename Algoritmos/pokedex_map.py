@@ -1,7 +1,7 @@
 import os, json
-from Algoritmos.hash_map import HashMap
+from hash_map import HashMap
 
-archivo_jason = os.path.abspath("pokedex.json")
+archivo_jason = os.path.abspath("Data\\pokedex.json")
 pokemon_map = HashMap()
 
 with open(archivo_jason, "r", encoding="utf-8") as pokedex:

@@ -1,10 +1,10 @@
-from clase_pc import PcOak
+from clase_pc import Pc
 
 class Entrenador():
     def __init__(self, nombre):
         self.nombre = nombre
         self.equipo = []
-        self.pc = PcOak()
+        self.pc = Pc()
     
     def agregar_pokemon_equipo(self, pokemon):
         if len(self.equipo) <= 6:
