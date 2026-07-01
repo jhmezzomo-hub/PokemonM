@@ -1,5 +1,5 @@
 import os, json
-from hash_map import HashMap
+from Algoritmos.hash_map import HashMap
 
 archivo_jason = os.path.abspath("Data\\pokedex.json")
 pokemon_map = HashMap()

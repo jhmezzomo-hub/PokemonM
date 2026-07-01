@@ -1,5 +1,5 @@
 import os, json
-from hash_set import HashSet
+from Algoritmos.hash_set import HashSet
 
 archivo_jason = os.path.abspath("Data\\medallas.json")
 medalla_set = HashSet()
