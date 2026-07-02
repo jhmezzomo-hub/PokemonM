@@ -6,19 +6,21 @@ from time import sleep
 
 class Pc():
     def __init__(self):
-        self.nodo = Node()
         self.linked_list = SingleLinkedList()
         self.stack = Stack()
+
+    def agregar_pokemon_pc(self, pokemon):
+        self.linked_list.agregar_nodo(pokemon)
 
     def mostrar_pc(self):
         os.system("cls" if os.name == "nt" else "clear")
         pokemones = self.linked_list.recorrer()
+        if self.linked_list.isEmpty():
+            print_animado("No posees ninguna Pokemon en la PC, trata de capturar alguno")
+            sleep(5)
+            return
         for i in pokemones:
             print_animado(i)
-
-    def agregar_pokemon_pc(self, pokemon):
-        poke_node = self.nodo(pokemon)
-        self.linked_list.agregar_nodo(poke_node)
 
     def hacer_trasnferencia(self):
         self.mostrar_pc()
@@ -68,14 +70,28 @@ class Pc():
             self.deshacer_transferencia()
 
     def bubble_alfabetico(self):
-        pokemones = self.linked_list.recorrer()
+        
+        pokemones = self.linked_list.recorrer() 
         from sorts.bubble import uso_bubble
         uso_bubble(pokemones)
-
+        self.linked_list = SingleLinkedList()
+        for pokemon in pokemones:
+            self.linked_list.agregar_nodo(pokemon)
+        
     def insertion_tipo(self):
-        pass
+        pokemones = self.linked_list.recorrer() 
+        from sorts.insertion import insertion
+        insertion(pokemones.tipo)
+        self.linked_list = SingleLinkedList()
+        for pokemon in pokemones:
+            self.linked_list.agregar_nodo(pokemon)
 
     def quick_pc(self):
-        pass
+        pokemones = self.linked_list.recorrer() 
+        from sorts.quick import quick_sort
+        quick_sort(pokemones.pc)
+        self.linked_list = SingleLinkedList()
+        for pokemon in pokemones:
+            self.linked_list.agregar_nodo(pokemon)
 
     

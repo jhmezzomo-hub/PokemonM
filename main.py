@@ -5,8 +5,6 @@ from clases.clase_entrenador import Entrenador
 from clases.clase_pc import Pc
 
 def main():
-    entrenador = Entrenador()
-    pc = Pc()
     opciones = ["Ver Pokédex", "Ver Equipo Principal", "Ver PC", "Ver Medallas", 
                 "Capturar nuevo Pokémon", "Ordenar PC", "Buscar Pokémon en Equipo",
                 "Enviar Pokémon al Centro Pokémon", "Transferir Pokémon al Profesor Oak",
@@ -15,6 +13,10 @@ def main():
     os.system("cls" if os.name == "nt" else "clear")
     print_animado("Bienvenido a Pokemon M!")
     sleep(2)
+    print_animado("Por favor, ingrese un nombre: ", salto=False)
+    nombre = input()
+    entrenador = Entrenador(nombre)
+    pc = Pc()
     while True:
         os.system("cls" if os.name == "nt" else "clear")
         for i, opcion in enumerate(opciones, 1):
@@ -37,7 +39,8 @@ def main():
                 entrenador.revisar_medallero()
             elif opcion_elegida == 5:
                 os.system("cls" if os.name == "nt" else "clear")
-                pass
+                from funciones.capturar import capturar_pokemon
+                entrenador.agregar_pokemon_equipo(capturar_pokemon())
             elif opcion_elegida == 6:
                 os.system("cls" if os.name == "nt" else "clear")
                 from funciones.ordenamiento import ordenamiento

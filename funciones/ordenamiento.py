@@ -10,7 +10,12 @@ def ordenamiento(pc):
     print_animado("Como desea organizar la PC? (-1 para salir) ", salto=False)
     try:
         ordenar_como = int(input())
-        if ordenar_como == -1:
+        if pc.linked_list.isEmpty():
+            os.system("cls" if os.name == "nt" else "clear")
+            print_animado("No hay elementos en el pc para ordenar")
+            sleep(5)
+            return
+        elif ordenar_como == -1:
             return
         elif ordenar_como == 1:
             os.system("cls" if os.name == "nt" else "clear")

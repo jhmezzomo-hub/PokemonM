@@ -2,6 +2,7 @@ import os, json
 from algoritmos.hash_map import HashMap
 from funciones.efecto_escritura import print_animado
 from time import sleep
+from clases.clase_pokemon import Pokemon
 
 def cargar_pokedex():
     archivo_jason = os.path.abspath("Data\\pokedex.json")
@@ -18,9 +19,10 @@ def mostrar_pokedex():
     os.system("cls" if os.name == "nt" else "clear")
     pokedex = cargar_pokedex()
     for bucket in pokedex.buckets:
-        for pokemon in bucket:
-            id, datos = pokemon
-            print_animado(f"{id} - {datos["nombre"]}")
+        for info in bucket:
+            id, datos = info
+            pokemon = Pokemon(id, datos["nombre"], datos["tipo"], datos["pc"])
+            print_animado(f"{pokemon.id} - {pokemon.nombre}")        
     
     try:
         print_animado("Seleccione el ID(numero) del pokemon cuya informacion desea saber(-1 para salir): ", salto=False)
