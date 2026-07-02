@@ -1,5 +1,5 @@
-from Algoritmos.listas_enlazadas import *
-from Algoritmos.stack import Stack
+from algoritmos.listas_enlazadas import *
+from algoritmos.stack import Stack
 
 class Pc():
     def __init__(self):
@@ -24,3 +24,11 @@ class Pc():
         print("Recuperando ultimo pokemon transferido...")
         pokemon = self.stack.pop()
         self.linked_list.agregar_nodo(pokemon)
+
+    def bubble_alfabetico(self):
+        pokemones = self.linked_list.recorrer()
+        from sorts.bubble import uso_bubble
+        uso_bubble(pokemones)
+
+    def insertion_tipo(self):
+        pass

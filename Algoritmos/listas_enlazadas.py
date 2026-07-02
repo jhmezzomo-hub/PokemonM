@@ -26,7 +26,6 @@ class SingleLinkedList:
         while actual:
             elementos.append(str(actual.dato))
             actual = actual.next
-        print(" -> ".join(elementos))
         return elementos
 
     def agregar_nodo(self, dato):
