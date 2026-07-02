@@ -47,7 +47,9 @@ def main():
                 ordenamiento(pc)
             elif opcion_elegida == 7:
                 os.system("cls" if os.name == "nt" else "clear")
-                pass
+                print_animado("Que pokemon desea buscar: ", salto=False)
+                pokemon = str(input())
+                entrenador.buscar_lineal(pokemon)
             elif opcion_elegida == 8:
                 os.system("cls" if os.name == "nt" else "clear")
                 from funciones.centro_pokemon import centro_pokemon

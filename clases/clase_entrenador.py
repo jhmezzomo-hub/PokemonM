@@ -2,6 +2,7 @@ from clases.clase_pc import Pc
 from algoritmos.hash_set import HashSet
 from funciones.efecto_escritura import print_animado
 from time import sleep
+from algoritmos.busqeuda_lineal import busqueda_lineal
 
 class Entrenador():
     def __init__(self, nombre):
@@ -42,3 +43,17 @@ class Entrenador():
             for i in self.equipo:
                 print_animado(f"{i["nombre"]} - PC: {i["pc"]}")
             sleep(5)
+
+    def buscar_lineal(self, pokemon):
+        nombres = []
+        for i in self.equipo:
+            nombres.append(i["nombre"])
+        existencia = busqueda_lineal(nombres, pokemon)
+        if existencia:
+            print_animado("El pokemon esta en el equipo")
+            sleep(5)
+            return
+        else:
+            print_animado("El pokemon no esta en el equipo")
+            sleep(5)
+            return

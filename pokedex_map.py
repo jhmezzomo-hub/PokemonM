@@ -3,6 +3,7 @@ from algoritmos.hash_map import HashMap
 from funciones.efecto_escritura import print_animado
 from time import sleep
 from clases.clase_pokemon import Pokemon
+from algoritmos.busqueda_binaria import busqueda_binaria
 
 def cargar_pokedex():
     archivo_jason = os.path.abspath("Data\\pokedex.json")
@@ -49,3 +50,20 @@ def mostrar_pokedex():
         mostrar_pokedex()
 
     return
+
+def existe_pokedex(buscado):
+    ids = []
+    pokemones = cargar_pokedex()
+    for buckets in pokemones.buckets:
+        for i in buckets:
+            id, dato = i
+            ids.append(id)
+    
+    existe = busqueda_binaria(ids, buscado)
+
+    if existe:
+        print_animado("Este pokemon existe en la pokedex")
+        nombre = pokemones.buscar(id)
+        print_animado(f"Nombre {nombre["nombre"]}")
+    else:
+        print_animado("Este pokemon no tiene registro")
