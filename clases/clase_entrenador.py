@@ -1,5 +1,6 @@
 from clases.clase_pc import Pc
 from algoritmos.hash_set import HashSet
+from funciones.efecto_escritura import print_animado
 
 class Entrenador():
     def __init__(self, nombre):
@@ -19,10 +20,18 @@ class Entrenador():
         if not self.medallero:
             print("No posees ninguna medalla, enfrentate a algun lider de gimansio")
         else:
-            print(f"Posees estas medallas:")
+            print_animado(f"Posees estas medallas:")
             for bucket in self.medallero.buckets:
                 for i in bucket:
-                    print(i)
+                    print_animado(i)
 
     def agregar_medallero(self, medalla):
         self.medallero.agregar_elemento(medalla)
+
+    def ver_equipo(self):
+        if not self.equipo:
+            print_animado("No posees ningun pokemon, trata de atraapar alguno")
+            return
+        else:
+            for i in self.equipo:
+                print_animado(i)

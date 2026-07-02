@@ -29,19 +29,20 @@ def mostrar_pokedex():
             return
         informacion = pokedex.buscar(str(mas_info))
         if informacion:
+            os.system("cls" if os.name == "nt" else "clear")
             print_animado(f"Nombre: {informacion["nombre"]}\nTipo: {informacion["tipo"]}\nPC: {informacion["pc"]}")
-            print_animado("Desea ver otro pokemon? S/N", salto=False)
+            print_animado("Desea ver otro pokemon? S/N ", salto=False)
             continuar = input()
-            if continuar == "S":
+            if continuar.capitalize() == "S":
                 mostrar_pokedex()
-            elif continuar == "N":
+            elif continuar.capitalize() == "N":
                 return
             else: raise Exception
         sleep(5)
     except Exception as e:
         os.system("cls" if os.name == "nt" else "clear")
         print(e)
-        print_animado("Por favor solo ingrese alguno de las opciones mostradas")
+        print("Por favor solo ingrese alguno de las opciones mostradas")
         sleep(2)
         mostrar_pokedex()
 
